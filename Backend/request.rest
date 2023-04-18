@@ -12,7 +12,7 @@ Content-Type: application/json
     "nim": "031",
     "email": "dev@gmail.com",
     "major": "Computer Science",
-    "university": "University Brawijaya"
+    "university": "Universitas Brawijaya"
 }
 
 ###
@@ -24,7 +24,7 @@ Content-Type: application/json
     "nim": "031",
     "email": "dev@gmail.com",
     "major": "Informatics",
-    "university": "Institute Technology Bandung"
+    "university": "Universitas Brawijaya"
 }
 
 ###
