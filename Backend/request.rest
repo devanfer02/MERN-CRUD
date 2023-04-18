@@ -1,10 +1,10 @@
-GET http://localhost:5000/users
+GET http://localhost:5000/students
 
 ###
-GET http://localhost:5000/users/1
+GET http://localhost:5000/students/1
 
 ### 
-POST http://localhost:5000/users
+POST http://localhost:5000/students
 Content-Type: application/json
 
 {
@@ -15,4 +15,18 @@ Content-Type: application/json
     "university": "University Brawijaya"
 }
 
+###
+PATCH http://localhost:5000/students/1
+Content-Type: application/json
+
+{
+    "name": "Devan",
+    "nim": "031",
+    "email": "dev@gmail.com",
+    "major": "Informatics",
+    "university": "Institute Technology Bandung"
+}
+
+###
+DELETE  http://localhost:5000/students
 
