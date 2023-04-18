@@ -1,0 +1,18 @@
+GET http://localhost:5000/users
+
+###
+GET http://localhost:5000/users/1
+
+### 
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "Devan",
+    "nim": "031",
+    "email": "dev@gmail.com",
+    "major": "Computer Science",
+    "university": "University Brawijaya"
+}
+
+
