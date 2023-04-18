@@ -46,7 +46,7 @@ export const updateStudent = async(req, res) => {
 
 export const deleteStudent = async(req, res) => {
     try {
-        await Student.delete({
+        await Student.destroy({
             where: {
                 id: req.params.id
             }
