@@ -15,6 +15,7 @@ export const UpdateStudent = () => {
 
     useEffect(() => {
         getStudentById();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const updateStudent = async (event) => {
