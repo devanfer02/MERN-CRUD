@@ -28,7 +28,7 @@ export const StudentList = () => {
 
     return (
         <div className="columns is-centered">
-            <div className="column is-three-quarters">
+            <div className="column is-four-fifths">
                 <h1>List Students</h1>
                 <hr />
                 <table className='table is-striped is-fullwidth'>
@@ -39,8 +39,8 @@ export const StudentList = () => {
                             <th>NIM</th>
                             <th>Email</th>
                             <th>Major</th>
-                            <th>University</th>
-                            <th>Action</th>
+                            <th className='has-text-centered'>University</th>
+                            <th className='has-text-centered'>Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -51,7 +51,7 @@ export const StudentList = () => {
                             <td>{student.nim}</td>
                             <td>{student.email}</td>
                             <td>{student.major}</td>
-                            <td>
+                            <td className='has-text-centered'>
                                 <figure className='image is-48x48'>
                                     <img src={`/img/uni_logos/${student.university}.png`} alt="universitas"/>
                                 </figure>
