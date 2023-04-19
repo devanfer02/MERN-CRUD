@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import 'bulma/css/bulma.css';
 
 export const StudentList = () => {
     const [students, setStudent] = useState([]);
@@ -24,9 +25,10 @@ export const StudentList = () => {
     }
 
     return (
-        <div className="columns mt-5 is-centered">
+        <div className="columns is-centered">
             <div className="column is-three-quarters">
-                    <Link to={'/add'} className='button is-info'>Add Student</Link>
+                <h1>List Students</h1>
+                <hr />
                 <table className='table is-striped is-fullwidth'>
                     <thead>
                         <tr>
@@ -53,7 +55,7 @@ export const StudentList = () => {
                                 </figure>
                             </td>
                             <td>
-                                <Link to={`/update/${student.id}`} className='button is-small is-success'>Update</Link>
+                                <Link to={`/update/${student.id}`} className='button is-small is-success' style={{textDecoration: 'none'}}>Update</Link>
                                 <button onClick={() => deleteStudent(student.id)} className='button is-small is-danger'>Delete</button>
                             </td>
                         </tr>))}

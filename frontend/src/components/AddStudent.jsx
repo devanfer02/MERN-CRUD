@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom';
-import { universities } from './universityList';
+import { universities } from '../js/universityList';
+import 'bulma/css/bulma.css';
 
 export const AddStudent = () => {
     const [ name, setName ] = useState("");
@@ -24,7 +25,7 @@ export const AddStudent = () => {
     };
 
     return (
-        <div className="columns mt-5 is-centered">
+        <div className="columns mb-3 is-centered">
             <div className="column is-three-quarters">
                 <form onSubmit={saveStudent}>
                     <div className="field">

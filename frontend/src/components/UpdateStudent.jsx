@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useNavigate, useParams } from 'react-router-dom';
-import { universities } from './universityList';
+import { universities } from '../js/universityList';
+import 'bulma/css/bulma.css';
 
 export const UpdateStudent = () => {
     const [ name, setName ] = useState("");
