@@ -42,8 +42,10 @@ export const UpdateStudent = () => {
     }
 
     return (
-        <div className="columns mt-5 is-centered">
+        <div className="columns mb-3 is-centered">
             <div className="column is-three-quarters">
+                <h1>Update Student</h1>
+                <hr />
                 <form onSubmit={updateStudent}>
                     <div className="field">
                         <label className="label">Name</label>
