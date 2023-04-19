@@ -7,7 +7,7 @@ import { Pagination } from './Pagination';
 export const StudentList = () => {
     const [students, setStudent] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
-    const [studentsPerPage, setStudentsPerPage] = useState(10);
+    const [studentsPerPage] = useState(10);
 
     const indexLastStudent = currentPage * studentsPerPage;
     const indexFirstStudent = indexLastStudent - studentsPerPage
