@@ -1,10 +1,15 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom';
 import { universities } from '../js/universityList';
 import 'bulma/css/bulma.css';
 
 export const AddStudent = () => {
+    useEffect(() => {
+        document.title = "Add Student";
+    }, [])
+
+
     const [ name, setName ] = useState("");
     const [ nim, setNim ] = useState("");
     const [ email, setEmail ] = useState("");

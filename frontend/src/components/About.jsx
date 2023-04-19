@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useEffect }from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export const About = () => {
-  return (
-    <>
+    useEffect(() => {
+        document.title = "About Page";
+    }, [])
+
+     return (
+        <>
         <div class="container mt-5">
             <div class="row">
             <div class="col-md-6">
@@ -54,6 +58,6 @@ export const About = () => {
             </div>
             </div>
         </div>   
-    </>
-  )
+        </>
+    )
 }

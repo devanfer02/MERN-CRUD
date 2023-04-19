@@ -15,6 +15,7 @@ export const UpdateStudent = () => {
 
     useEffect(() => {
         getStudentById();
+        document.title = "Update Student";
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 

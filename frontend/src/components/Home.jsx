@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export const Home = () => {
+    useEffect(() => {
+        document.title = "Home Page";
+    }, [])
+
     return (
         <body>
             <div class="container home-container mb-3">

@@ -6,8 +6,10 @@ import 'bulma/css/bulma.css';
 export const StudentList = () => {
     const [students, setStudent] = useState([]);
 
+    
     useEffect(() => {
         getStudents();
+        document.title = "List Students";
     }, []);
 
     const getStudents = async () => {
