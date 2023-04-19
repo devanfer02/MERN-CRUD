@@ -19,3 +19,5 @@ export const universities =
     "Institut Pertanian Bogor",
     "Universitas Negeri Jakarta"
 ];
+
+universities.sort();

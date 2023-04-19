@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 export const StudentList = () => {
@@ -12,9 +13,20 @@ export const StudentList = () => {
         const response = await axios.get('http://localhost:5000/students');
         setStudent(response.data);
     }
+
+    const deleteStudent = async (id) => {
+        try {
+            await axios.delete(`http://localhost:5000/students/${id}`)
+            getStudents();
+        } catch(error){
+            console.log(`Error: ${error}`);
+        }
+    }
+
     return (
         <div className="columns mt-5 is-centered">
             <div className="column is-three-quarters">
+                    <Link to={'/add'} className='button is-info'>Add Student</Link>
                 <table className='table is-striped is-fullwidth'>
                     <thead>
                         <tr>
@@ -41,8 +53,8 @@ export const StudentList = () => {
                                 </figure>
                             </td>
                             <td>
-                                <button className='button is-small is-success'>Update</button>
-                                <button className='button is-small is-danger'>Delete</button>
+                                <Link to={`/update/${student.id}`} className='button is-small is-success'>Update</Link>
+                                <button onClick={() => deleteStudent(student.id)} className='button is-small is-danger'>Delete</button>
                             </td>
                         </tr>))}
                     </tbody>
