@@ -2,10 +2,15 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import 'bulma/css/bulma.css';
+import { Pagination } from './Pagination';
 
 export const StudentList = () => {
     const [students, setStudent] = useState([]);
+    const [currentPage, setCurrentPage] = useState(1);
+    const [studentsPerPage, setStudentsPerPage] = useState(10);
 
+    const indexLastStudent = currentPage * studentsPerPage;
+    const indexFirstStudent = indexLastStudent - studentsPerPage
     
     useEffect(() => {
         getStudents();
@@ -31,6 +36,7 @@ export const StudentList = () => {
             <div className="column is-four-fifths">
                 <h1>List Students</h1>
                 <hr />
+                <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} studentsPerPage={studentsPerPage} totalStudents={students.length} />
                 <table className='table is-striped is-fullwidth'>
                     <thead>
                         <tr>
@@ -44,9 +50,9 @@ export const StudentList = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {students.map((student, index) => (
+                        {students.slice(indexFirstStudent, indexLastStudent).map((student, index) => (
                         <tr key={student.id}>
-                            <td>{index + 1}</td>
+                            <td>{index + indexFirstStudent + 1}</td>
                             <td>{student.name}</td>
                             <td>{student.nim}</td>
                             <td>{student.email}</td>
